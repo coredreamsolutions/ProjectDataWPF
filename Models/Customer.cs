@@ -20,14 +20,21 @@ namespace ProjectDataWPF.Models
 
         public long CustomerNumber { get; set; }
         public string CustomerName { get; set; }
-
+        public int CustomerAge { get; set; }
+        public string CustomerAddress1 { get; set; }
+        public string CustomerAddress2 { get; set; }
+        public long CustomerMobileNumber { get; set; }
 
         private static Timer aTimer;
 
         public Customer()
         {
             CustomerNumber = 1;
-            CustomerName = "James";
+            CustomerName = "James Holden";
+            CustomerAge = 32;
+            CustomerAddress1 = "123 Penny Lane";
+            CustomerAddress2 = "Apt #3C";
+            CustomerMobileNumber = 0001112222;
 
             SetTimer();
         }

@@ -9,6 +9,10 @@
     <Grid>
         <Label FontSize="32" Content="{Binding CustomerNumber}" />
         <Label Margin="100,100,0,0" FontSize="32" Content="{Binding CustomerName}" />
+        <Label Margin="100,130,0,0" FontSize="32" Content="{Binding CustomerAge}" />
+        <Label Margin="100,160,0,0" FontSize="32" Content="{Binding CustomerAddress1}" />
+        <Label Margin="100,190,0,0" FontSize="32" Content="{Binding CustomerAddress2}" />
+        <Label Margin="100,220,0,0" FontSize="32" Content="{Binding CustomerMobileNumber}" />
 
 
     </Grid>
