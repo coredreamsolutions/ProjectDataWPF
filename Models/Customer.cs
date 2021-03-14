@@ -9,11 +9,8 @@ using System.Timers;
 
 namespace ProjectDataWPF.Models
 {
-    public class Customer : INotifyPropertyChanged
+    public class Customer
     {
-
-   
-
         public long CustomerNumber { get; set; }
         public string CustomerName { get; set; }
         public int CustomerAge { get; set; }
