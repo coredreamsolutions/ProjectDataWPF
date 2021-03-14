@@ -18,9 +18,9 @@ namespace ProjectDataWPF.Views
     /// <summary>
     /// Interaction logic for LimitedInputUserControl.xaml
     /// </summary>
-    public partial class LimitedInputUserControl : UserControl
+    public partial class LimitedInputView : UserControl
     {
-        public LimitedInputUserControl()
+        public LimitedInputView()
         {
             InitializeComponent();
 

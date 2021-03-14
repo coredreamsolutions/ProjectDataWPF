@@ -27,8 +27,8 @@
         </Button>-->
 
         <StackPanel x:Name="Test" Margin="20">
-            <uc:LimitedInputUserControl Title="Product #:" MaxLength="16" Height="50" />
-            <uc:LimitedInputUserControl Title="Product Name:" MaxLength="20" Height="50" />
+            <uc:LimitedInputView Title="Product #:" MaxLength="16" Height="50" />
+            <uc:LimitedInputView Title="Product Name:" MaxLength="20" Height="50" />
         </StackPanel>
         
 
