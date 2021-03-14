@@ -30,8 +30,9 @@
             <uc:LimitedInputView Title="Product #:" MaxLength="16" Height="50" />
             <uc:LimitedInputView Title="Product Name:" MaxLength="20" Height="50" />
         </StackPanel>
-        
 
+        <ComboBox ItemsSource="{Binding CategoryName}"/>
+        <Button x:Name="btnGetCategories" Width="100" Height="20" HorizontalAlignment="Center" Content="Get Categories" Command="{Binding Path=GetCategoriesCommand}"/>
         <!--<TextBlock HorizontalAlignment="Center" FontWeight="DemiBold">Customer Information</TextBlock>
         <Label Content="{Binding CustomerNumber}" />
         <Label Content="{Binding CustomerName}" />

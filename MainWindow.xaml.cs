@@ -25,7 +25,7 @@ namespace ProjectDataWPF
         {
             InitializeComponent();
 
-            this.DataContext = new Customer();
+            //this.DataContext = new Customer();
         }
     }
 }
