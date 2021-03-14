@@ -26,13 +26,14 @@
             </StackPanel>
         </Button>-->
 
-        <StackPanel x:Name="Test" Margin="20">
+        <!--<StackPanel x:Name="Test" Margin="20">
             <uc:LimitedInputView Title="Product #:" MaxLength="16" Height="50" />
             <uc:LimitedInputView Title="Product Name:" MaxLength="20" Height="50" />
-        </StackPanel>
+        </StackPanel>-->
 
         <ComboBox ItemsSource="{Binding CategoryName}"/>
-        <Button x:Name="btnGetCategories" Width="100" Height="20" HorizontalAlignment="Center" Content="Get Categories" Command="{Binding Path=GetCategoriesCommand}"/>
+        <Button x:Name="btnGetCategories" Width="100" Height="20" 
+                HorizontalAlignment="Center" Content="Get Categories" Command="{Binding Path=GetCategoriesCommand}"/>
         <!--<TextBlock HorizontalAlignment="Center" FontWeight="DemiBold">Customer Information</TextBlock>
         <Label Content="{Binding CustomerNumber}" />
         <Label Content="{Binding CustomerName}" />
@@ -43,10 +44,7 @@
     
     </Grid>
     <Window.Resources>
-        <Style TargetType="StackPanel">
-            
-        </Style>
-       
+      
        
     </Window.Resources>
 </Window>
