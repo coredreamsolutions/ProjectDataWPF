@@ -4,18 +4,50 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectDataWPF"
+        xmlns:uc="clr-namespace:ProjectDataWPF.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label FontSize="32" Content="{Binding CustomerNumber}" />
-        <Label Margin="100,100,0,0" FontSize="32" Content="{Binding CustomerName}" />
-        <Label Margin="100,130,0,0" FontSize="32" Content="{Binding CustomerAge}" />
-        <Label Margin="100,160,0,0" FontSize="32" Content="{Binding CustomerAddress1}" />
-        <Label Margin="100,190,0,0" FontSize="32" Content="{Binding CustomerAddress2}" />
-        <Label Margin="100,220,0,0" FontSize="32" Content="{Binding CustomerMobileNumber}" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
 
+        <!--<Button Grid.Column="2">
+            <StackPanel>
+                <Label Content="SVG ICON HERE" />
+                <Label Content="Press Me!" />
+            </StackPanel>
+        </Button>-->
+
+        <StackPanel x:Name="Test" Margin="20">
+            <uc:LimitedInputUserControl Title="Product #:" MaxLength="16" Height="50" />
+            <uc:LimitedInputUserControl Title="Product Name:" MaxLength="20" Height="50" />
+        </StackPanel>
+        
+
+        <!--<TextBlock HorizontalAlignment="Center" FontWeight="DemiBold">Customer Information</TextBlock>
+        <Label Content="{Binding CustomerNumber}" />
+        <Label Content="{Binding CustomerName}" />
+        <Label Content="{Binding CustomerAge}" />
+        <Label Content="{Binding CustomerAddress1}" />
+        <Label Content="{Binding CustomerAddress2}" />
+        <Label Content="{Binding CustomerMobileNumber}" />-->
+    
     </Grid>
+    <Window.Resources>
+        <Style TargetType="StackPanel">
+            
+        </Style>
+       
+       
+    </Window.Resources>
 </Window>
 
     
