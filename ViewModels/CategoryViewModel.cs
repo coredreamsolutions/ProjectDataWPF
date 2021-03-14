@@ -22,9 +22,9 @@ namespace ProjectDataWPF.ViewModels
 
         public ICommand GetCategoriesCommand { get; }
 
-        public ObservableCollection<Category> Categories { get; set; }
+        public ObservableCollection<Category> Categories { get; set; } = new();
 
-        public void GetCategories()
+        private void GetCategories()
         {
 
             using IDbConnection cnn = Database.GetConnection();
