@@ -17,6 +17,7 @@ namespace ProjectDataWPF.ViewModels
     {
         public CategoryViewModel()
         {
+            GetCategories();
             GetCategoriesCommand = new RelayCommand(GetCategories);
         }
 
@@ -30,7 +31,7 @@ namespace ProjectDataWPF.ViewModels
             using IDbConnection cnn = Database.GetConnection();
 
             var result = cnn.Query<Category>(
-                $"SELECT * FROM CategoryDefinitions WHERE CategoryNumber > 0 ORDER BY CategoryName ASC;").ToList();
+                $"SELECT * FROM CategoryDefinitions WHERE CategoryNumber > 0 ORDER BY CategoryName ASC").ToList();
 
             Categories = new ObservableCollection<Category>(result);
         }

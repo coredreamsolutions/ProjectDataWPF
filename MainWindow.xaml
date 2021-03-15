@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectDataWPF"
+        xmlns:vm="clr-namespace:ProjectDataWPF.ViewModels"
         xmlns:uc="clr-namespace:ProjectDataWPF.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -19,21 +20,20 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <!--<Button Grid.Column="2">
-            <StackPanel>
-                <Label Content="SVG ICON HERE" />
-                <Label Content="Press Me!" />
-            </StackPanel>
-        </Button>-->
 
         <!--<StackPanel x:Name="Test" Margin="20">
             <uc:LimitedInputView Title="Product #:" MaxLength="16" Height="50" />
             <uc:LimitedInputView Title="Product Name:" MaxLength="20" Height="50" />
         </StackPanel>-->
 
-        <ComboBox ItemsSource="{Binding CategoryName}"/>
-        <Button x:Name="btnGetCategories" Width="100" Height="20" 
+        <ComboBox Grid.Column="2" Grid.Row="1" Margin="100,70,0,0" DisplayMemberPath="CategoryName" ItemsSource="{Binding Categories}"/>
+        <TextBlock FontSize="32" Grid.Column="2" Text="{Binding Categories.Count}"/>
+        <ListBox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" DisplayMemberPath="CategoryName" ItemsSource="{Binding Categories}" />
+
+        <Button Grid.Column="1" x:Name="btnGetCategories"
                 HorizontalAlignment="Center" Content="Get Categories" Command="{Binding Path=GetCategoriesCommand}"/>
+
+        <DataGrid ItemsSource="{Binding Products}" />
         <!--<TextBlock HorizontalAlignment="Center" FontWeight="DemiBold">Customer Information</TextBlock>
         <Label Content="{Binding CustomerNumber}" />
         <Label Content="{Binding CustomerName}" />
@@ -43,9 +43,21 @@
         <Label Content="{Binding CustomerMobileNumber}" />-->
     
     </Grid>
+    
+    <Window.DataContext>
+        <vm:CategoryViewModel />
+    </Window.DataContext>
+  
+
     <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
+        </Style>
+
       
-       
     </Window.Resources>
 </Window>
 
